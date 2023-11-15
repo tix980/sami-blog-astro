@@ -1,5 +1,6 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content';
+import PostLike from '../../components/PostLike.astro';
 
 import Layout from '../../layouts/Layout.astro';
 
@@ -22,5 +23,6 @@ const { Content } = await post.render();
 <Layout seo = {{title:post.data.title}}>
   <article>
     <Content />
+    <PostLike />
   </article>
 </Layout>

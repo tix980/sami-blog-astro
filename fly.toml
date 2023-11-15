@@ -1,0 +1,21 @@
+# fly.toml app configuration file generated for black-voice-5542 on 2023-11-14T20:10:16-05:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "black-voice-5542"
+primary_region = "yyz"
+
+[build]
+
+[http_service]
+  internal_port = 4321
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+[mounts]
+  source="db"
+  destination="/mnt/db"
