@@ -51,14 +51,14 @@ const posts =await getCollection('blog');
 
 
 		<div class='flex flex-col'>
-			<h2 class='text-2xl font-semibold'>Recent blog posts:</h2>
+			<h2 class='text-2xl font-semibold text-black'>Recent blog posts:</h2>
 			<ol class='mt-4 px-10 space-y-2 list-decimal'>
 				{
 					posts.map((post) => (
 						<li>
 							<Link class='flex justify-between' href={`/blog/${post.slug}`}>
 								{post.data.title}
-								<span class='text-gray-400'>
+								<span class='text-black'>
 									{post.data.date.toUTCString().slice(0, -13)}
 								</span>
 							</Link>
