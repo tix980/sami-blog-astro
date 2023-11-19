@@ -1,7 +1,7 @@
 ---
 import Link from '../components/Link.astro';
 import { SEO, type Props as SEOProps } from 'astro-seo';
-import metal from "../assets/metal.png";
+import cat from "../assets/cat-nyan-cat.gif";
 import { Image } from "astro:assets";
 
 interface Props {
@@ -47,7 +47,7 @@ const ogImageUrl = `${Astro.url.origin}/og/${ogImage?.template ?? 'default'}.png
 		<div class='flex justify-between items-center py-4 md:container md:mx-auto'>
       <header>
         <a href='/' class='font-bold text-2xl hover:text-blue-500'
-          >Sami Xie<span><Image src= {metal} alt="sami" /></span></a
+          >Sami Xie<span><Image src= {cat} alt="sami" /></span></a
         >
       </header>
       <nav>
