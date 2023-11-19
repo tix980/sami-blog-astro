@@ -46,9 +46,10 @@ const ogImageUrl = `${Astro.url.origin}/og/${ogImage?.template ?? 'default'}.png
 	<body>
 		<div class='flex justify-between items-center py-4 md:container md:mx-auto'>
       <header>
-        <a href='/' class='font-bold text-2xl hover:text-blue-500'
-          >Sami Xie<span><Image src= {cat} alt="sami" /></span></a
-        >
+				<div class="flex">
+        <a href='/' class='font-bold text-2xl hover:text-blue-500 flex-auto'
+          >Sami Xie</a><span class="flex-auto logo"><Image src= {cat} alt="sami" width={50} /></span>
+				</div>
       </header>
       <nav>
         <ul class='flex gap-4'>
@@ -86,6 +87,13 @@ const ogImageUrl = `${Astro.url.origin}/og/${ogImage?.template ?? 'default'}.png
 		background: #f6f6f6;
 		background-size: 224px;
 	}
+
+
+	.logo{
+		margin-left: 1em;
+		margin-top:-0.5em;
+	}
+
 	code {
 		font-family:
 			Menlo,

@@ -58,7 +58,7 @@ const posts =await getCollection('blog');
 						<li>
 							<Link class='flex justify-between' href={`/blog/${post.slug}`}>
 								{post.data.title}
-								<span class='text-black'>
+								<span>
 									{post.data.date.toUTCString().slice(0, -13)}
 								</span>
 							</Link>
@@ -85,7 +85,6 @@ const posts =await getCollection('blog');
 		padding: 1rem;
 		width: 800px;
 		max-width: calc(100% - 2rem);
-		color: white;
 		font-size: 20px;
 		line-height: 1.6;
 	}

@@ -13,4 +13,11 @@ const {href, rel = '', isExternal, class: classList} = Astro.props;
 ---
 
 
-<a href={href} class:list={['hover:text-blue-500', classList]} rel={`${rel}${isExternal ? 'nofollow noopener external' : ''}`}><slot /></a>
+<a href={href} class:list={['hover:text-blue-500 text-black', classList]} rel={`${rel}${isExternal ? 'nofollow noopener external' : ''}`}><slot /></a>
+
+
+<style>
+  li::marker{
+    color:#000 !important;
+  }
+</style>
