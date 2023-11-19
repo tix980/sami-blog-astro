@@ -4,11 +4,18 @@ import { SEO, type Props as SEOProps } from 'astro-seo';
 import metal from "../assets/metal.png";
 import { Image } from "astro:assets";
 
-interface Props{
-	seo?: SEOProps;
+interface Props {
+  seo?: SEOProps;
+  ogImage?: {
+    template: string;
+    data?: Record<string, any>;
+  }
 }
 
-const {seo} = Astro.props;
+
+const { seo, ogImage } = Astro.props;
+
+const ogImageUrl = `${Astro.url.origin}/og/${ogImage?.template ?? 'default'}.png?${new URLSearchParams(ogImage?.data)}`;
 
 
 ---
@@ -26,6 +33,14 @@ const {seo} = Astro.props;
 		{...seo}
 		title = {seo?.title ?? "Sami Xie"}
 		description = {seo?.description ?? "Sami Xie's website"}
+		openGraph={{
+			basic: {
+				type: 'website',
+				title: seo?.title ?? "Sami Xie's personal blog site",
+				image: ogImageUrl,
+				url: seo?.canonical,
+			},
+		}}
 		/>
 	</head>
 	<body>
