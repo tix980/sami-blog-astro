@@ -21,7 +21,7 @@ const ogImageUrl = `${Astro.url.origin}/og/${ogImage?.template ?? 'default'}.png
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="bg-background text-text">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -43,7 +43,7 @@ const ogImageUrl = `${Astro.url.origin}/og/${ogImage?.template ?? 'default'}.png
 		}}
 		/>
 	</head>
-	<body>
+	<body >
 		<div class='flex justify-between items-center py-4 md:container md:mx-auto'>
       <header>
 				<div class="flex">
@@ -52,12 +52,12 @@ const ogImageUrl = `${Astro.url.origin}/og/${ogImage?.template ?? 'default'}.png
 				</div>
       </header>
       <nav>
-        <ul class='flex gap-4'>
-          <li><Link href='/'>Home</Link></li>
-          <li><Link href='/about'>About</Link></li>
-          <li><Link href='/blog/1'>Blog</Link></li>
+        <ul class='flex gap-4 '>
+          <li><Link href='/' class="text-text">Home</Link></li>
+          <li><Link href='/about' class="text-text">About</Link></li>
+          <li><Link href='/blog/1'class="text-text">Blog</Link></li>
           <li>
-            <Link href='https://github.com/tix980' isExternal> GitHub</Link>
+            <Link href='https://github.com/tix980' class="text-text" isExternal> GitHub</Link>
           </li>
         </ul>
       </nav>
@@ -105,4 +105,21 @@ const ogImageUrl = `${Astro.url.origin}/og/${ogImage?.template ?? 'default'}.png
 			Courier New,
 			monospace;
 	}
+
+
+  :root {
+    --background: #090a0c;
+    --text: #d8dfee;
+    --primary: #11c3df;
+    --secondary: #07137d;
+    --accent: #3bde77;
+  }
+  .dark {
+    --text: #f3f4f6;
+    --background: #111827;
+    --primary: #22D3EE;
+    --secondary: #818CF8;
+    --accent: #22c55e;
+  }
+
 </style>

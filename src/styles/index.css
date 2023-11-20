@@ -1,8 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+
+@layer base {
+  :root {
+    --background: #090a0c;
+    --text: #d8dfee;
+    --primary: #11c3df;
+    --secondary: #07137d;
+    --accent: #3bde77;
+  }
+  .dark {
+    --text: #f3f4f6;
+    --background: #111827;
+    --primary: #22D3EE;
+    --secondary: #818CF8;
+    --accent: #22c55e;
+  }
+}
 
 h1{
   text-decoration: underline;
-  font-family:'Metal Mania';
 }
-

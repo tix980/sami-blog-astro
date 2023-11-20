@@ -13,9 +13,9 @@ const posts =await getCollection('blog');
 
 ---
 
-<Layout seo={{title:'Welcome to Astro.'}}>
-	<main>
-		<svg
+<Layout seo={{title:'Welcome to Astro.'}} >
+	<main >
+		<!-- <svg
 			class="astro-a"
 			width="495"
 			height="623"
@@ -43,20 +43,21 @@ const posts =await getCollection('blog');
 				</linearGradient>
 			</defs>
 		</svg>
-		<h1 style={{fontWeight: 300}} class:list={['box',{red: isRed}]}>Welcome to <span class="text-gradient">Astro</span></h1>
+		<h1 style={{fontWeight: 300}} class:list={['box',{red: isRed}]}>Welcome to <span class="text-gradient heading">Astro</span></h1>
 		<p class="instructions italic text-right leading-loose">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
+		</p> -->
 
-
+		<h1>Welcome to my blog</h1>
+		<p>I love food</p>
 		<div class='flex flex-col'>
-			<h2 class='text-2xl font-semibold text-black'>Recent blog posts:</h2>
+			<h2 class='text-2xl font-semibold text-text'>Recent blog posts:</h2>
 			<ol class='mt-4 px-10 space-y-2 list-decimal'>
 				{
 					posts.map((post) => (
 						<li>
-							<Link class='flex justify-between' href={`/blog/${post.slug}`}>
+							<Link class='flex justify-between text-text' href={`/blog/${post.slug}`}>
 								{post.data.title}
 								<span>
 									{post.data.date.toUTCString().slice(0, -13)}
@@ -65,8 +66,8 @@ const posts =await getCollection('blog');
 						</li>
 					))
 				}
-			</ol>
-		</div>
+			</ol>		</div>
+
 
 
 	</main>
@@ -98,43 +99,13 @@ const posts =await getCollection('blog');
 		z-index: -1;
 	}
 	h1 {
-		color: var(--foreground);
-		background: var(--background);
 		font-size: 4rem;
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+
+
+
 </style>
