@@ -12,4 +12,4 @@ env MODE=production
 
 expose 4321
 
-cmd npm run start
+cmd npm run start  

@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
-
+import { astroImageTools } from "astro-imagetools";
 import node from "@astrojs/node";
 
 // https://astro.build/config

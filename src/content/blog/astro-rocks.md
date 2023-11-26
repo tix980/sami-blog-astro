@@ -2,9 +2,12 @@
 title: Astro rocks!
 tags: ['hello', 'world']
 date: 2023-08-07
+description: Hello!
+image: ../../assets/codeclub.PNG
 ---
 
 Astro is a seriously cool framework!
+![This is code club](../../assets/codeclub.PNG)
 
 ## Hello, world!
 

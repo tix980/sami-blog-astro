@@ -8,6 +8,9 @@ primary_region = "yyz"
 
 [build]
 
+[env]
+DATABASE_URL = "/mnt/db/production.db"
+
 [http_service]
   internal_port = 4321
   force_https = true
