@@ -21,6 +21,10 @@
   }
 }
 
-h1{
+h1, h2{
   text-decoration: underline;
+}
+
+.card-shadow {
+  background-color: #d8dfee;
 }

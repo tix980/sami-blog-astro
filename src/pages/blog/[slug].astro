@@ -26,6 +26,7 @@ const { Content } = await post.render();
 >
   <article class='prose max-w-[80ch] mx-auto mt-12'>
     <Content />
+    <PostLike slug={post.slug} />
   </article>
-  <PostLike slug={post.slug} />
+  
 </Layout>

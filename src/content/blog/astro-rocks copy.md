@@ -1,15 +1,18 @@
 ---
-title: Hello, world!
-tags: ["hello", "world"]
-date: 2023-09-18
+title: Astro rocks!
+tags: ['hello', 'world']
+date: 2023-08-07
 description: Hello!
-image: ../../assets/pokemon.png
+image: ../../assets/codeclub.PNG
 ---
+
+Astro is a seriously cool framework!
+![This is code club](../../assets/codeclub.PNG)
 
 ## Hello, world!
 
 Hello, world! Writing content in Astro is very easy!
-![This is code club](../../assets/codeclub.PNG)
+
 > Just use the Content Collections API!
 
 ## Displaying the content
