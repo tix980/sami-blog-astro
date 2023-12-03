@@ -2,7 +2,7 @@
 title: Astro rocks!
 tags: ['hello', 'world']
 date: 2023-08-07
-description: Hello!
+description: Hello, world! Writing content in Astro is very easy!
 image: ../../assets/codeclub.PNG
 ---
 

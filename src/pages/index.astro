@@ -80,7 +80,7 @@ const posts =await getCollection('blog');
         }
 
 </style>
-<Layout seo={{title:'Welcome to Astro.'}} >
+<Layout seo={{title:'Sami Xie blog.'}} >
 	<main >
 		<h1>Welcome to my blog</h1>
 		<p>
@@ -97,7 +97,12 @@ const posts =await getCollection('blog');
 										<Link class='flex justify-between text-text' href={`/blog/${post.slug}`}>
 											<h4 class="card-title">{post.data.title}</h4>
 										</Link>
+										<p class="card-text">{post.data.date.toLocaleDateString()}</p>
+										<hr />
 										<p class="card-text">{post.data.description}</p>
+										<Link class='text-text' href={`/blog/${post.slug}`}>
+											Read More......
+										</Link>
 									</div>
 								</div>
 							</div>
